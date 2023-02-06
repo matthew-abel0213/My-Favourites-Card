@@ -1,0 +1,106 @@
+body {
+  background: #18191a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  font-size: 95%;
+  padding-bottom: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  column-gap: 75px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  transition: 500ms ease;
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover .text {
+  top: 290px;
+  opacity: 1;
+}
+
+.img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  transition: 500ms ease;
+}
+
+.card:hover .img {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+h1 {
+  text-align: center;
+  color: #faf9f6;
+  padding-bottom: 10px;
+  text-decoration: underline #11e879;
+}
+
+.card-title {
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.text {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  width: 360px;
+  height: 400px;
+  padding: 20px;
+  transition: 500ms ease;
+}
+
+.text p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-title::after {
+  content: "";
+  background-color: #11e879;
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  transition: 500ms ease;
+}
+
+.card:hover .card-title::after {
+  width: 200px;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+  background-color: #11e879;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.button:hover {
+  background-color: #faf9f6;
+}
